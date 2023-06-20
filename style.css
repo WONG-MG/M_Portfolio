@@ -1,0 +1,496 @@
+body {
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+    background-color: rgb(247, 242, 235);
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation bar */
+.navbar-custom {
+    background-color: transparent;
+    width: 100%;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav>li>a:hover{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    background-color:rgb(247, 242, 235);
+}
+
+.nav>li>a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav>li>a:hover::before {
+    transform: scaleX(1);
+}
+
+.active>a {
+    font-weight: 400 !important;
+}
+
+
+/* Header section */
+header{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: rgb(247, 242, 235);
+    color: rgb(0, 0, 0);
+}
+
+.front_header{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #000;
+    color: rgb(247, 242, 235);
+}
+
+.front{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.front a{
+    color: rgb(247, 242, 235);
+}
+
+.front a:hover{
+    text-decoration: none;
+    color: rgb(247, 242, 235);
+}
+
+.front a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(247, 242, 235);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.front a:hover::before {
+    transform: scaleX(1);
+}
+
+.intro{
+    padding-top: 65px;
+    padding-bottom: 400px;
+}
+
+.myname h2{
+    max-width: 900px;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.myname h4{
+    font-size: 30px;
+}
+
+
+/* About me section */
+.MW h3{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 30px;
+}
+
+.paragraph-font {
+    max-width: 1050px;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.paragraph-font p{
+    font-size: 18px;
+}
+
+.resume{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(247, 242, 235);
+}
+
+.resume button{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.resume button:hover{
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.cv{
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    color: rgb(247, 242, 235);
+}
+
+
+/* Qualification section */
+.data{
+    width: 110%;
+    display: grid;
+    grid-template-columns: 2fr max-content 2.5fr;
+}
+
+.qual_tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.qual_tabs button{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.title{
+    font-size: 18px;
+}
+
+#work_text, #edu_text{
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+
+#work_text:after, #edu_text:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+#work_text:hover:after, #edu_text:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.calender{
+    font-size: 15px;
+    color: rgb(97, 97, 97);
+}
+
+.rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    transform: translate(6px, -7px);
+}
+
+
+/* Skill section */
+.skill_section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.skills_list .data{
+    text-align: left;
+}
+
+.skills_name{
+    font-size: 20px;
+}
+
+.skills_list{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.skills_bar {
+    background-color: rgb(226, 223, 219);
+    margin-right: 30px;
+    margin-bottom: 18px;
+    height: 10px;
+    width: 100%;
+    border-radius: 3px;
+    position: relative;
+}
+
+.skills_bar #skills_ai{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 98%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.skills_bar #skills_ps{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 98%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.skills_bar #skills_id{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 90%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.skills_bar #skills_ae{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 70%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.skills_bar #skills_fig{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 98%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.skills_bar #skills_html{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 47%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.skills_bar #skills_boot{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 35%;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+
+/* Project */
+.project{
+    text-align: center;
+}
+
+.project1 h2{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.project1 h4{
+    font-size: 33px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.project1 p{
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.btn{
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0px;
+    font-size: 22px;
+    float: right;
+}
+
+.btn-prev{
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0px;
+    font-size: 22px;
+    float: left;
+}
+
+#btn-link{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 1px rgb(0, 0, 0) solid;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.7s 0s;
+}
+
+#btn-prevv{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 1px rgb(0, 0, 0) solid;
+    background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.7s 0s;
+}
+
+#btn-link:hover{
+    text-decoration: none;
+    color: white;
+    background-size: 100% 100%;
+}
+
+#btn-prevv:hover{
+    text-decoration: none;
+    color: white;
+    background-size: 100% 100%;
+}
+
+
+.end{
+    padding-top: 100px;
+    padding-bottom: 150px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.space{
+    padding-top: 100px;
+}
+
+
+
+.title-font {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.container-l {
+    width: 900px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+
+img {
+    padding-top: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+p {
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.abc {
+    font-weight: 100;
+}
+
+ul {
+    font-weight: 200;
+    font-size: 21px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.list_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.list_container2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.list_row{
+    font-size: 14px;
+    width: 100%;
+    height: 30%;
+}
+
+.bold {
+    font-weight: 500;
+}
