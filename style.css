@@ -334,6 +334,7 @@ header{
 /* Project */
 .project{
     text-align: center;
+    padding-top: 30px;
 }
 
 .project1 h2{
@@ -443,8 +444,7 @@ header{
     padding-bottom: 80px;
     text-align: center;
 }
-
-
+ 
 img {
     padding-top: 20px;
 }
